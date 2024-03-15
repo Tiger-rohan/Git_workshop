@@ -1,5 +1,3 @@
-# Custom python functions
-
 def double_number(a):
     result = a + a
     print(f'Result before doubling: {a}')
