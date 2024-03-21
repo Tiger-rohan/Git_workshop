@@ -1,0 +1,21 @@
+name: CI-Multi-Jobs
+
+on:
+  push:
+    branches:
+      - main
+      - python-packaging
+  workflow_dispatch:
+
+jobs:
+  with-checkout-job:
+    name: With Checkout
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v4
+
+      - name: Install tree & run
+        run: |
+          sudo apt-get install -y tree
+          tree .
