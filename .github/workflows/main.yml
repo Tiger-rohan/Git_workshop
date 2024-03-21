@@ -3,6 +3,7 @@ name: CI-HelloWorld
 on:
   push:
     branches:
+      - main
       - kevin
   workflow_dispatch:
 
