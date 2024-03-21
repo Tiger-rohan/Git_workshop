@@ -1,0 +1,21 @@
+name: CI-HelloWorld
+
+on:
+  push:
+    branches:
+      - kevin
+  workflow_dispatch:
+
+jobs:
+
+  hello-worls-job:
+    name: Hello World
+    runs-on: 'ubuntu-latest'
+    steps:
+      - name: Run echo
+        run: |
+          echo "Hello world.!"
+
+      - name: Run ls
+        run: |
+          ls -la
