@@ -4,24 +4,13 @@ on:
   push:
     branches:
       - main
-      - kevin
+      - python-packaging
   workflow_dispatch:
 
 jobs:
-
-  without-checkout-job:
-    name: Without Checkout
-    runs-on: 'ubuntu-latest'
-    steps:
-      - name: Install tree & run
-        run: |
-          sudo apt-get install -y tree
-          tree .
-
   with-checkout-job:
     name: With Checkout
     runs-on: 'ubuntu-latest'
-    needs: without-checkout-job
     steps:
       - name: Git Checkout
         uses: actions/checkout@v4
